@@ -1,0 +1,48 @@
+name: vocky_call
+description: Peer-to-peer voice call app over WiFi and Bluetooth. No internet required.
+version: 1.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.22.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # WebRTC — real-time audio for WiFi mode (echo cancellation, Opus codec)
+  # 1.6.0 fixes Flutter embedding v2 compatibility
+  flutter_webrtc: ^1.6.0
+
+  # Bluetooth Classic — RFCOMM socket for BT mode (AGP 8+ compatible)
+  flutter_bluetooth_serial: ^0.4.0
+
+  # State management + dependency injection (single source of truth)
+  flutter_riverpod: ^2.5.1
+
+  # Runtime permissions dialog
+  permission_handler: ^11.3.1
+
+  # Declarative navigation
+  go_router: ^14.2.7
+
+  # Icons
+  cupertino_icons: ^1.0.8
+  device_info_plus: ^13.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  mocktail: ^1.0.4
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: false
+  remove_alpha_ios: true
+  image_path: "assets/icon/vocky.png"
